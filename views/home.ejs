@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+
+<% posts.forEach(function(post){ %>
+
+<% var shortText = post.article.substring(0,100); %>
+
+<h1><%= post.title %></h1>
+<p><%= shortText %>...
+    <a href="/posts/<%=post.title%>">read more</a>
+</p>
+
+<% }); %>
+
+<div class="container-fluid">
+    <form action="/" method="post">
+        <button class="btn btn-primary" type="submit" >Compose</button> <br>
+        <small>post a new article.</small>
+    </form>
+</div>
+<%- include("partials/footer"); -%>
