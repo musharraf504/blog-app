@@ -58,6 +58,10 @@ app.get("/posts/:post", function(req,res){
 
 });
 
+app.post("/post", function(req , res){
+  res.redirect("/");
+});
+
 app.post("/", function(req, res){
   res.redirect("/compose");
 });
