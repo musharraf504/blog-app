@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 app.get("/", function(req,res){
-  res.render("home",{homeContent: homeStartingContent,
+  res.render("index",{homeContent: homeStartingContent,
   posts: posts
   });
 });
